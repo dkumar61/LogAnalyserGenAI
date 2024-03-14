@@ -4,8 +4,11 @@ import google.ai.generativelanguage as glm
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
-API_KEY = os.environ.get("GOOGLE_API_KEY")
+# load_dotenv()
+# API_KEY = os.environ.get("GOOGLE_API_KEY")
+# genai.configure(api_key=API_KEY)
+
+API_KEY = st.secrets['GOOGLE_API_KEY']
 genai.configure(api_key=API_KEY)
 
 st.image("adidas.jpg", width=200)
